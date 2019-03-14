@@ -1,0 +1,25 @@
+.cardComponent {
+  margin: 2% 3%;
+
+  .Grid {
+    margin: 0 0;
+  }
+  .colorButton {
+    background-color: #f8afae;
+    color: #ffffff;
+    &:hover {
+      outline: 1px solid #f8afae;
+      background-color: transparent;
+      color: #f8afae;
+    }
+  }
+
+  .gridColumn {
+    padding: 15px;
+  }
+
+  .buttonNextPrev {
+    padding-top: 2%;
+    padding-bottom: 5%;
+  }
+}
