@@ -30,12 +30,11 @@ class CardComponent extends Component {
 				await this.setState({catalogs: response.data.products, isLoading: false})
 			}
 		} catch (error) {
-			
+			console.log(error);
 		}
   }
   
   cardOnClick = (data) => {
-    console.log(this.props);
     const idProduct = data.id
     window.localStorage.clear()
     window.localStorage.setItem('currentProduct', JSON.stringify(data))
