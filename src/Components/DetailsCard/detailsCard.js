@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Container, Grid, Image, Segment, Header, Icon, Button,Card } from 'semantic-ui-react'
+import { Container, Grid, Image, Segment, Header, Icon, Button } from 'semantic-ui-react'
 import { BASE_MEDIA } from '../../Services/env'
 import classes from './detailsCard.module.scss';
 
