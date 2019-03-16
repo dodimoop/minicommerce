@@ -56,8 +56,15 @@ class CardComponent extends Component {
   }
 
 	render () {
+    console.log(this.state.isLoading)
 		let dataHandler
-		if (this.state.catalogs) {
+		if (this.state.isLoading) {
+      dataHandler = (
+				<Dimmer active inverted>
+					<Loader inverted content='Loading' />
+				</Dimmer>
+			)
+		} else {
 			dataHandler = (
 				this.state.catalogs.map((data, key) => (
 					<Grid.Column width={4} key={key} className={classes.gridColumn}>
@@ -77,12 +84,6 @@ class CardComponent extends Component {
 						</Card>
 					</Grid.Column>
 				))
-			)
-		} else {
-			dataHandler = (
-				<Dimmer active inverted>
-					<Loader inverted content='Loading' />
-				</Dimmer>
 			)
 		}
 
